@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+</head>
+<body>
+    <h1>Destinations</h1>
+    <ul>
+        {% for destination in destinations %}
+            <li>
+                <h2>{{ destination.name }}</h2>
+                <p>Places to visit:</p>
+                <ul>
+                    {% for place in destination.places.all %}
+                        <li>
+                            <a href="{% url 'place_detail' place.pk %}">{{ place.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

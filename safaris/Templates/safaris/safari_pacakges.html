@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safari Packages</title>
+</head>
+<body>
+    <h1>All Safari Packages</h1>
+    <ul>
+        {% for safari in packages %}
+            <li>
+                <h2>{{ safari.title }} ({{ safari.duration_days }} days)</h2>
+                {% if safari.cover_image %}
+                    <img src="{{ safari.cover_image.url }}" width="300">
+                {% endif %}
+                <p>{{ safari.overview }}</p>
+                <p>Destination: {{ safari.destination.name }}</p>
+                <p>Places:</p>
+                <ul>
+                    {% for place in safari.places.all %}
+                        <li>
+                            <a href="{% url 'place_detail' place.pk %}">{{ place.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

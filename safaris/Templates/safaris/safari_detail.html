@@ -1,0 +1,27 @@
+{% extends 'safaris/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        {% if safari.cover_image %}
+        <img src="{{ safari.cover_image.url }}" class="img-fluid rounded" alt="{{ safari.title }}">
+        {% endif %}
+    </div>
+
+    <div class="col-md-6">
+        <h1 class="fw-bold">{{ safari.title }}</h1>
+        <p class="text-muted">{{ safari.duration_days }} days</p>
+
+        <p>{{ safari.overview }}</p>
+
+        <h5>Places Covered</h5>
+        <ul>
+            {% for place in safari.places.all %}
+            <li>{{ place.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/packages/" class="btn btn-secondary mt-3">Back to Packages</a>
+    </div>
+</div>
+{% endblock %}

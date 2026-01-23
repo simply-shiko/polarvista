@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polar Vista Safaris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="nav-link" href="/">PolarVista</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/destinations/">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="/places/">Places</a></li>
+                <li class="nav-item"><a class="nav-link" href="/packages/">Safaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container my-5">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 Polar Vista Safaris. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<a href="https://wa.me/254701267244"
+   target="_blank"
+   style="
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: #25D366;
+     color: white;
+     border-radius: 50%;
+     width: 60px;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 30px;
+     text-decoration: none;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+     z-index: 1000;
+   ">
+   💬
+</a>
+<a href="https://instagram.com/polarvista_safaris"
+   target="_blank"
+   style="
+     position: fixed;
+     bottom: 90px;
+     right: 20px;
+     background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+     color: white;
+     border-radius: 50%;
+     width: 60px;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 28px;
+     text-decoration: none;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+     z-index: 1000;
+   ">
+   📸
+</a>
+<p>
+    <i class="bi bi-instagram"></i>
+    <a href="https://instagram.com/polarvista_safaris"
+       target="_blank"
+       class="text-decoration-none fw-bold">
+        @polarvista_safaris
+    </a>
+</p>
+</html>

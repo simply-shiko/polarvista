@@ -1,0 +1,53 @@
+{% extends 'safaris/base.html' %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="fw-bold">Contact Us</h1>
+    <p class="text-muted">We’d love to hear from you. Fill out the form below or reach us directly via WhatsApp or email.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        {% if sucess %}
+        <div class="alert alert-sucess text-center"> Your message has been sent successfully!</div>
+        {% endif %}
+
+        <form method="=POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" email="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+
+        <div class="mt-4 text-center">
+            <p>Or reach us directly:</p>
+            <p>📧 Email: polarvistasafaris@gmail.com</p>
+            <p>📱 WhatsApp:
+                <a href="http://wa.me/254701267244" target="_blank" class="text-decoration-none fw-bold">
+                    +254 701 267 244
+                </a> 
+            </p>
+            <p>
+    📸 Instagram:
+    <a href="https://instagram.com/polarvista_safaris"
+       target="_blank"
+       class="text-decoration-none fw-bold">
+        @polarvista_safaris
+    </a>
+</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

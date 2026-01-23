@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ place.name }}</title>
+</head>
+<body>
+    <h1>{{ place.name }}</h1>
+    <p>Destination: {{ place.destination.name }}</p>
+    <p>{{ place.description }}</p>
+    {% if place.image %}
+        <img src="{{ place.image.url }}" width="500">
+    {% endif %}
+</body>
+</html>
