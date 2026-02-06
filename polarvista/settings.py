@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-or+q1dns4#cq4us%*%#bt5%3uwmhmx0#38()7w4i4gb83o8(@e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['polarvista.onrender.com','localhost','127.0.0.1']
 
 
 # Application definition
